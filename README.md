@@ -170,7 +170,7 @@ git push origin main
 ### 2. Deploy on Heroku
 
 1. Click the button below or fork the repository:
-   [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+   [![Deploy to Heroku](https://dashboard.heroku.com/new?template=https://github.com/RDX-EXPART/OTT-DOWNLOADER-bot)](https://heroku.com/deploy)
 2. Fill in the required environment variables in the Heroku dashboard.
 3. Make sure the `worker` dyno is switched **ON** in the **Resources** tab:
    ```bash
