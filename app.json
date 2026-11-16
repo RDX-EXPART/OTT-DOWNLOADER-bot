@@ -1,0 +1,73 @@
+{
+  "name": "OTT-DOWNLOADER",
+  "description": "Telegram bot for downloading OTT content with Widevine DRM decryption.",
+  "repository": "https://github.com/RDX-EXPART/OTT-DOWNLOADER-bot",
+  "logo": "https://telegram.org/img/t_logo.png",
+  "keywords": ["telegram", "bot", "pyrogram", "ott", "downloader"],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your Telegram bot token from @BotFather",
+      "required": true
+    },
+    "API_ID": {
+      "description": "Your Telegram API ID from my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API HASH from my.telegram.org",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Telegram User ID of the bot owner",
+      "required": true
+    },
+    "DB_URL": {
+      "description": "MongoDB URI connection string (e.g. mongodb+srv://...)",
+      "required": true
+    },
+    "LOG_CHANNEL": {
+      "description": "Telegram Channel ID for bot logs (e.g. -100xxxxxxxxx)",
+      "required": false
+    },
+    "SESSION_STRING": {
+      "description": "Pyrogram string session for 4GB upload limit bypass (Optional)",
+      "required": false
+    },
+    "PROXY": {
+      "description": "Proxy URL if required (Optional)",
+      "required": false
+    },
+    "GDRIVE_FOLDER_ID": {
+      "description": "Google Drive Folder ID for uploads (Optional)",
+      "required": false
+    },
+    "INDEX_LINK": {
+      "description": "Index URL of Google Drive folder (Optional)",
+      "required": false
+    },
+    "HOTSTAR_USER_TOKEN": {
+      "description": "Hotstar user auth token (Optional)",
+      "required": false
+    },
+    "ZEE5_TOKEN": {
+      "description": "Zee5 auth token (Optional)",
+      "required": false
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-apt"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "scripts": {
+    "postdeploy": "echo Bot deployed successfully!"
+  }
+}
